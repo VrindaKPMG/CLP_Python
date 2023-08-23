@@ -13,6 +13,13 @@ def join_list(list):
     return ", ".join(list)
 
 
+def add_to_do(langs):
+    c = open("tolearn.txt", "w")
+    c.write("To learn:\n")
+    for item in langs:
+        c.write("- "+item+"\n")
+
+
 print("***** Don't Know Which Coding Language to Learn, We Are Here to Help *****")
 time.sleep(2)
 name = input("What is your name? ")
@@ -51,18 +58,24 @@ if purpose == 1:
     time.sleep(1)
     print("For frontend web development, you should try learning",
           join_list(frontend_lang))
+    add_to_do(backend_lang)
+    add_to_do(frontend_lang)
 elif purpose == 2:
     print("For game development, you should try learning", join_list(game_lang))
+    add_to_do(game_lang)
 elif purpose == 3:
     print("For mobile app development, you should try learning", join_list(app_lang))
+    add_to_do(app_lang)
 elif purpose == 4:
     print("For data analysis/manipulation, you should try learning",
           join_list(data_lang))
+    add_to_do(data_lang)
 elif purpose == 5:
     print("To build further coding knowledge, stick to what you know and improve on it.")
     time.sleep(1)
     print("Look for tutorials and courses that help you advance your",
           join_list(known_languages), "skills.")
+    add_to_do(known_languages)
 else:
     print("Not really one of the options is it...")
 
