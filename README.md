@@ -1,4 +1,4 @@
-So you know some Python
+So you know some Python...
 But why stop there?
 This program will give you some guidance on which coding language to focus on next.
 ** Please we aware that we are currently in our beta version so the answers are limited. More knowledge will be added soon **
